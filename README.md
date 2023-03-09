@@ -1,4 +1,4 @@
-# Vite⚡️Next Generation Frontend Tooling  
+# Vite⚡️Next Generation Frontend Tooling   
 
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
