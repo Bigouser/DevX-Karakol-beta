@@ -12,7 +12,10 @@ export const Registration = () => {
 
 	const handleGoogleSignIn = async () => {
 		try {
-			await googleSignIn();
+			const success = await googleSignIn();
+			if (success) {
+				navigate("/");
+			}
 		} catch (error) {
 			console.log(error);
 		}
@@ -22,7 +25,7 @@ export const Registration = () => {
 		if (user != null) {
 			navigate("/");
 		}
-	}, [user]);
+	}, [user, navigate]);
 
 	return (
 		<div className={scss.login}>

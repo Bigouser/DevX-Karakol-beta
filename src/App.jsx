@@ -32,7 +32,7 @@ export const App = () => {
 							<AuthProvider>
 								<Routes>
 									<Route path="/login" element={<Login />} />
-									<Route path="/registration" element={<Registration />} />
+									<Route path="/register" element={<Registration />} />
 									<Route
 										path="*"
 										element={

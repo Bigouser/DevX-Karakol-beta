@@ -51,7 +51,7 @@ export const Login = () => {
 					.
 				</p>
 				<p className={scss.switch}>
-					Do not have an account? <Link to="/Registration">Register</Link>
+					Do not have an account? <Link to="/register">Register</Link>
 				</p>
 			</div>
 		</div>
