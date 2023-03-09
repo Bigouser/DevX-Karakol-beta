@@ -1,0 +1,141 @@
+.logout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.user {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			$width: 40px;
+			width: $width;
+			height: $width;
+			border-radius: 50%;
+		}
+
+		.text {
+			margin: 0 10px;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			p {
+				&:first-child {
+					font-size: 14px;
+					font-weight: 600;
+				}
+				&:last-child {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+
+	.button {
+		padding: 5px;
+		border-radius: 5px;
+		width: 30px;
+
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			// background: rgba(0, 0, 0, 0.15);
+			background: rgba(255, 255, 255, 0.151);
+		}
+	}
+}
+
+.login {
+	background: linear-gradient(-45deg, #6919ff, rgb(13, 16, 25)) fixed;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	padding: 0 5px;
+
+	.style {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		background: rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+
+		.logo {
+			margin: 25px 0 15px 0;
+			width: 200px;
+		}
+
+		h1 {
+			margin: 25px 0;
+			font-weight: 500;
+			span {
+				color: #6b63ff;
+			}
+		}
+
+		.submit {
+			width: 100%;
+			padding: 10px 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgba(255, 255, 255, 0.123);
+			border-radius: 10px;
+
+			transition: 0.2s;
+			cursor: pointer;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.2);
+			}
+
+			img {
+				margin-right: 10px;
+				width: 25px;
+			}
+
+			p {
+				font-weight: 500;
+			}
+		}
+
+		.documentation {
+			margin: 25px 0;
+			text-align: center;
+			font-size: 14px;
+			color: #ffffffce;
+
+			a {
+				color: #5f62e2;
+			}
+		}
+
+		.switch {
+			text-align: center;
+			font-size: 15px;
+			color: #ffffffce;
+
+			a {
+				font-weight: 600;
+
+				color: #5f62e2;
+
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

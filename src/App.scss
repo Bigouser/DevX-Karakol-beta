@@ -1,0 +1,138 @@
+body {
+	// background: linear-gradient(-45deg, #4203b6, rgb(13, 16, 25)) fixed;
+	// background: linear-gradient(-45deg, #7f39ff, rgb(13, 16, 25)) fixed;
+	// background: linear-gradient(-45deg, #6919ff, rgb(13, 16, 25)) fixed;
+
+	color: white;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1300px;
+	padding: 0 20px;
+}
+
+:root {
+	// ! light
+	// ! header
+	--header-scroll-light: #000000;
+	--header-ActScroll-light: #00000065;
+	--header-text-light: #000000;
+	--header-button-light: #b3b3b3;
+	--header-ActButton-light: #6b63ff;
+	--header-border-light: #6b63ff;
+	--header-burger-menu-light: #6b63ff;
+
+	// ! dark
+	// ! header
+	--header-scroll-dark: #00000000;
+	--header-ActScroll-dark: #0c131ba8;
+	--header-text-dark: #ffffff;
+	--header-button-dark: #3b3849;
+	--header-ActButton-dark: #6b63ff;
+	--header-border-dark: #3a3551;
+	--header-burger-menu-dark: #202125;
+}
+
+.layout {
+	.header__jtsecn {
+		// ! scroll
+		.headerScroll {
+			background: var(--header-scroll-light);
+		}
+		.headerScroll.active {
+			background: var(--header-ActScroll-light);
+		}
+
+		// ! nav
+		.link {
+			a {
+				color: var(--header-text-light);
+
+				&:hover {
+					background: var(--header-button-light);
+				}
+			}
+			.activeHeaderStyle {
+				background: var(--header-ActButton-light);
+
+				&:hover {
+					background: var(--header-ActButton-light);
+				}
+			}
+		}
+
+		// ! burger menu
+		.nav__burger__menu {
+			background: var(--header-burger-menu-light);
+			border: 1px solid var(--header-border-light);
+
+			a {
+				color: var(--header-text-light);
+
+				&:hover {
+					background: var(--header-button-light);
+				}
+			}
+			.activeHeaderStyle {
+				background: var(--header-ActButton-light);
+
+				&:hover {
+					background: var(--header-ActButton-light);
+				}
+			}
+		}
+	}
+}
+
+.layout.dark {
+	.header__jtsecn {
+		// ! scroll
+		.headerScroll {
+			background: var(--header-scroll-dark);
+		}
+		.headerScroll.active {
+			background: var(--header-ActScroll-dark);
+		}
+
+		// ! nav
+		.link {
+			a {
+				color: var(--header-text-dark);
+
+				&:hover {
+					background: var(--header-button-dark);
+				}
+			}
+			.activeHeaderStyle {
+				background: var(--header-ActButton-dark);
+
+				&:hover {
+					background: var(--header-ActButton-dark);
+				}
+			}
+		}
+
+		// ! burger menu
+		.nav__burger__menu {
+			background: var(--header-burger-menu-dark);
+			border: 1px solid var(--header-border-dark);
+
+			a {
+				color: var(--header-text-dark);
+
+				&:hover {
+					background: var(--header-button-dark);
+				}
+			}
+			.activeHeaderStyle {
+				background: var(--header-ActButton-dark);
+
+				&:hover {
+					background: var(--header-ActButton-dark);
+				}
+			}
+		}
+	}
+}
