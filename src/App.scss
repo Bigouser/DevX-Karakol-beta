@@ -19,28 +19,28 @@ body {
   --header-scroll-light: #0c131b;
   --header-ActScroll-light: #0c131be0;
   --header-text-light: #fff;
-  --header-button-light: rgba(255, 255, 255, 0.151);
+  --header-button-light: rgba(255, 255, 255, 0.103);
   --header-ActButton-light: rgb(107, 99, 255);
   --header-border-light: rgba(255, 255, 255, 0.151);
   --header-burger-menu-light: #0f1a25;
 
   // ! wrapper
   --wrapper-bg-all-light: #ffffff;
-  --main-text-light: #000000;
+  --main-text-light: #0f1a25;
   --footer-text-light: #000000;
 
   // todo dark
   // ! header
   --header-scroll-dark: #00000000;
-  --header-ActScroll-dark: #0c131ba8;
+  --header-ActScroll-dark: #1a2438ee;
   --header-text-dark: #ffffff;
-  --header-button-dark: #3b3849;
+  --header-button-dark: #6d25fe23;
   --header-ActButton-dark: #6b63ff;
-  --header-border-dark: #3a3551;
-  --header-burger-menu-dark: #202125;
+  --header-border-dark: rgba(255, 255, 255, 0.151);
+  --header-burger-menu-dark: #1f2a42;
 
   // ! wrapper
-  --wrapper-bg-all-dark: #212227;
+  --wrapper-bg-all-dark: #0c131b;
   --main-text-dark: #ffffff;
   --footer-text-dark: #ffffff;
 }
