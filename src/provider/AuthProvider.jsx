@@ -1,15 +1,8 @@
-import {
-	useContext,
-	createContext,
-	useEffect,
-	useState,
-	useMemo,
-	useCallback,
-} from "react";
+import { useContext, createContext, useEffect, useState } from "react";
 import {
 	GoogleAuthProvider,
-	signInWithRedirect,
 	signInWithPopup,
+	signInWithRedirect,
 	signOut,
 	onAuthStateChanged,
 } from "firebase/auth";
@@ -20,23 +13,20 @@ const UserContext = createContext();
 export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 
-	const provider = useMemo(() => {
-		return new GoogleAuthProvider();
-	}, []);
-
-	const googleSignIn = useCallback(() => {
-		// signInWithRedirect(auth, provider);
+	const googleSignIn = () => {
+		const provider = new GoogleAuthProvider();
 		signInWithPopup(auth, provider);
-	}, [provider]);
+		// signInWithRedirect(auth, provider);
+	};
 
-	const logOut = useCallback(() => {
+	const logOut = () => {
 		signOut(auth);
-	}, []);
+	};
 
 	useEffect(() => {
 		const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
 			setUser(currentUser);
-			// console.log("User", currentUser);
+			console.log("User", currentUser);
 		});
 		return () => {
 			unsubscribe();
