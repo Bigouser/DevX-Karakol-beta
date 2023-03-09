@@ -1,174 +1,174 @@
 body {
-	// background: linear-gradient(-45deg, #4203b6, rgb(13, 16, 25)) fixed;
-	// background: linear-gradient(-45deg, #7f39ff, rgb(13, 16, 25)) fixed;
-	// background: linear-gradient(-45deg, #6919ff, rgb(13, 16, 25)) fixed;
+  // background: linear-gradient(-45deg, #4203b6, rgb(13, 16, 25)) fixed;
+  // background: linear-gradient(-45deg, #7f39ff, rgb(13, 16, 25)) fixed;
+  // background: linear-gradient(-45deg, #6919ff, rgb(13, 16, 25)) fixed;
 
-	color: white;
+  color: white;
 }
 
 .container {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1300px;
-	padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 20px;
 }
 
 :root {
-	// todo light
-	// ! header
-	--header-scroll-light: #000000;
-	--header-ActScroll-light: #00000065;
-	--header-text-light: #ffffff;
-	--header-button-light: #b3b3b3;
-	--header-ActButton-light: #6b63ff;
-	--header-border-light: #6b63ff;
-	--header-burger-menu-light: #6b63ff;
+  // todo light
+  // ! header
+  --header-scroll-light: #0c131b;
+  --header-ActScroll-light: #0c131be0;
+  --header-text-light: #fff;
+  --header-button-light: rgba(255, 255, 255, 0.151);
+  --header-ActButton-light: rgb(107, 99, 255);
+  --header-border-light: rgba(255, 255, 255, 0.151);
+  --header-burger-menu-light: #0f1a25;
 
-	// ! wrapper
-	--wrapper-bg-all-light: #ffffff;
-	--main-text-light: #000000;
-	--footer-text-light: #000000;
+  // ! wrapper
+  --wrapper-bg-all-light: #ffffff;
+  --main-text-light: #000000;
+  --footer-text-light: #000000;
 
-	// todo dark
-	// ! header
-	--header-scroll-dark: #00000000;
-	--header-ActScroll-dark: #0c131ba8;
-	--header-text-dark: #ffffff;
-	--header-button-dark: #3b3849;
-	--header-ActButton-dark: #6b63ff;
-	--header-border-dark: #3a3551;
-	--header-burger-menu-dark: #202125;
+  // todo dark
+  // ! header
+  --header-scroll-dark: #00000000;
+  --header-ActScroll-dark: #0c131ba8;
+  --header-text-dark: #ffffff;
+  --header-button-dark: #3b3849;
+  --header-ActButton-dark: #6b63ff;
+  --header-border-dark: #3a3551;
+  --header-burger-menu-dark: #202125;
 
-	// ! wrapper
-	--wrapper-bg-all-dark: #212227;
-	--main-text-dark: #ffffff;
-	--footer-text-dark: #ffffff;
+  // ! wrapper
+  --wrapper-bg-all-dark: #212227;
+  --main-text-dark: #ffffff;
+  --footer-text-dark: #ffffff;
 }
 
 .layout {
-	// todo haeder
-	.header__jtsecn {
-		.headerScroll {
-			background: var(--header-scroll-light);
-		}
-		.headerScroll.active {
-			background: var(--header-ActScroll-light);
-		}
+  // todo haeder
+  .header__jtsecn {
+    .headerScroll {
+      background: var(--header-scroll-light);
+    }
+    .headerScroll.active {
+      background: var(--header-ActScroll-light);
+    }
 
-		// ! nav
-		.link {
-			a {
-				color: var(--header-text-light);
+    // ! nav
+    .link {
+      a {
+        color: var(--header-text-light);
 
-				&:hover {
-					background: var(--header-button-light);
-				}
-			}
-			.activeHeaderStyle {
-				background: var(--header-ActButton-light);
+        &:hover {
+          background: var(--header-button-light);
+        }
+      }
+      .activeHeaderStyle {
+        background: var(--header-ActButton-light);
 
-				&:hover {
-					background: var(--header-ActButton-light);
-				}
-			}
-		}
+        &:hover {
+          background: var(--header-ActButton-light);
+        }
+      }
+    }
 
-		// ! burger menu nav
-		.nav__burger__menu {
-			background: var(--header-burger-menu-light);
-			border: 1px solid var(--header-border-light);
+    // ! burger menu nav
+    .nav__burger__menu {
+      background: var(--header-burger-menu-light);
+      border: 1px solid var(--header-border-light);
 
-			a {
-				color: var(--header-text-light);
+      a {
+        color: var(--header-text-light);
 
-				&:hover {
-					background: var(--header-button-light);
-				}
-			}
-			.activeHeaderStyle {
-				background: var(--header-ActButton-light);
+        &:hover {
+          background: var(--header-button-light);
+        }
+      }
+      .activeHeaderStyle {
+        background: var(--header-ActButton-light);
 
-				&:hover {
-					background: var(--header-ActButton-light);
-				}
-			}
-		}
-	}
+        &:hover {
+          background: var(--header-ActButton-light);
+        }
+      }
+    }
+  }
 
-	// ! wrapper
-	.wrapper {
-		background: var(--wrapper-bg-all-light);
+  // ! wrapper
+  .wrapper {
+    background: var(--wrapper-bg-all-light);
 
-		main {
-			color: var(--main-text-light);
-		}
+    main {
+      color: var(--main-text-light);
+    }
 
-		footer {
-			color: var(--footer-text-light);
-		}
-	}
+    footer {
+      color: var(--footer-text-light);
+    }
+  }
 }
 
 .layout.dark {
-	// todo header
-	.header__jtsecn {
-		.headerScroll {
-			background: var(--header-scroll-dark);
-		}
-		.headerScroll.active {
-			background: var(--header-ActScroll-dark);
-		}
+  // todo header
+  .header__jtsecn {
+    .headerScroll {
+      background: var(--header-scroll-dark);
+    }
+    .headerScroll.active {
+      background: var(--header-ActScroll-dark);
+    }
 
-		// ! nav
-		.link {
-			a {
-				color: var(--header-text-dark);
+    // ! nav
+    .link {
+      a {
+        color: var(--header-text-dark);
 
-				&:hover {
-					background: var(--header-button-dark);
-				}
-			}
-			.activeHeaderStyle {
-				background: var(--header-ActButton-dark);
+        &:hover {
+          background: var(--header-button-dark);
+        }
+      }
+      .activeHeaderStyle {
+        background: var(--header-ActButton-dark);
 
-				&:hover {
-					background: var(--header-ActButton-dark);
-				}
-			}
-		}
+        &:hover {
+          background: var(--header-ActButton-dark);
+        }
+      }
+    }
 
-		// ! burger menu nav
-		.nav__burger__menu {
-			background: var(--header-burger-menu-dark);
-			border: 1px solid var(--header-border-dark);
+    // ! burger menu nav
+    .nav__burger__menu {
+      background: var(--header-burger-menu-dark);
+      border: 1px solid var(--header-border-dark);
 
-			a {
-				color: var(--header-text-dark);
+      a {
+        color: var(--header-text-dark);
 
-				&:hover {
-					background: var(--header-button-dark);
-				}
-			}
-			.activeHeaderStyle {
-				background: var(--header-ActButton-dark);
+        &:hover {
+          background: var(--header-button-dark);
+        }
+      }
+      .activeHeaderStyle {
+        background: var(--header-ActButton-dark);
 
-				&:hover {
-					background: var(--header-ActButton-dark);
-				}
-			}
-		}
-	}
+        &:hover {
+          background: var(--header-ActButton-dark);
+        }
+      }
+    }
+  }
 
-	// ! wrapper
-	.wrapper {
-		background: var(--wrapper-bg-all-dark);
+  // ! wrapper
+  .wrapper {
+    background: var(--wrapper-bg-all-dark);
 
-		main {
-			color: var(--main-text-dark);
-		}
+    main {
+      color: var(--main-text-dark);
+    }
 
-		footer {
-			color: var(--footer-text-dark);
-		}
-	}
+    footer {
+      color: var(--footer-text-dark);
+    }
+  }
 }
