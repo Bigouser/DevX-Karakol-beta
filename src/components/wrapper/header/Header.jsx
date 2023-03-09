@@ -5,8 +5,8 @@ import { Logout } from "../../auth/Logout";
 import "./HeaderActive.scss";
 
 import pic from "../../../assets/logo.png";
-import sun from "../../../assets/icons/sun.png";
-import moon from "../../../assets/icons/moon.png";
+import sun from "../../../assets/icons/sun.svg";
+import moon from "../../../assets/icons/moon.svg";
 
 const links = [
 	{ to: "/", text: "Home" },
@@ -36,13 +36,13 @@ export const Header = () => {
 					<div className="container">
 						<div className="content">
 							{/* ! header menu */}
-							<div className="left">
-								<div className="logo">
-									<a href="">
-										<img src={pic} alt="DevX logo" />
-									</a>
-								</div>
-								<div className="nav">
+							<div className="logo">
+								<a href="">
+									<img src={pic} alt="DevX logo" />
+								</a>
+							</div>
+							<div className="nav__menu">
+								<div className="left">
 									<div className="link">
 										{links.map((link) => (
 											<NavLink
@@ -56,15 +56,19 @@ export const Header = () => {
 										))}
 									</div>
 								</div>
-							</div>
-							<div className="right">
-								<Logout />
-								<div className="icons" onClick={() => setIsDark(!isDark)}>
-									{isDark ? (
-										<img src={sun} alt="sun" />
-									) : (
-										<img src={moon} alt="moon" />
-									)}
+								<div className="right">
+									<div
+										className="switch__theme"
+										onClick={() => setIsDark(!isDark)}>
+										{isDark ? (
+											<img src={sun} alt="sun" />
+										) : (
+											<img src={moon} alt="moon" />
+										)}
+									</div>
+									<div className="logout">
+										<Logout />
+									</div>
 								</div>
 							</div>
 
@@ -84,18 +88,27 @@ export const Header = () => {
 										{link.text}
 									</NavLink>
 								))}
-								<div className="burger__logout">
-									<Logout />
-									<div className="icons" onClick={() => setIsDark(!isDark)}>
+								<NavLink
+									className="burger__menu__switch__theme"
+									onClick={() => setIsDark(!isDark)}>
+									<div
+										className="switch__theme"
+										onClick={() => setIsDark(!isDark)}>
 										{isDark ? (
 											<img src={sun} alt="sun" />
 										) : (
 											<img src={moon} alt="moon" />
 										)}
 									</div>
+									Switch Theme
+								</NavLink>
+								<div className="right">
+									<div className="logout menu__logout">
+										<Logout />
+									</div>
 								</div>
 							</div>
- ь
+
 							<div className="burger__button">
 								<label>
 									<input
