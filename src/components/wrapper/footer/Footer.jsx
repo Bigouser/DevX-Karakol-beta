@@ -14,25 +14,26 @@ export const Footer = () => {
 						<div className="block">
 							<img className="logo" src={devxLogo} alt="iksu_devx_logo" />
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-								adipisci maiores at repellat, vel vitae non ndivla aliquam eaque
-								id laboriosam ut odio quod eum sed esse corrupti, dolorem alias.
+								Level up your career, income, and life. WEDEVX helped over 432
+								students land their first jobs in tech, become the next one and
+								change your life today!
 							</p>
 						</div>
 						<div className="block">
 							<h6>Courses</h6>
-							<a href="#">Lorem</a>
-							<a href="#">Lorem</a>
+							<a href="#">SDET</a>
+							<a href="#">Full Stack</a>
 						</div>
 						<div className="block">
 							<h6>Karakol-IKSU</h6>
+							<a href="#">Pricing</a>
 							<a href="#">About Us</a>
 							<a href="#">FAQs</a>
 						</div>
 						<div className="block">
 							<h6>Contact Us</h6>
-							<a href="#">Lorem, ipsum.</a>
-							<a href="#">Lorem, ipsum.</a>
+							<a href="#">hello@devxschool.com</a>
+							<a href="#">312-667-9735</a>
 						</div>
 					</div>
 					<hr />
