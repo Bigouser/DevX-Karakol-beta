@@ -110,6 +110,14 @@ export const Header = () => {
 							</div>
 
 							<div className="burger__button">
+								<div
+									className={isOpen ? "burger__icon open" : "burger__icon"}
+									onClick={() => setIsOpen(!isOpen)}>
+									<span />
+								</div>
+							</div>
+
+							{/* <div className="burger__button">
 								<label>
 									<input
 										type="checkbox"
@@ -120,7 +128,7 @@ export const Header = () => {
 									<span></span>
 									<span></span>
 								</label>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
