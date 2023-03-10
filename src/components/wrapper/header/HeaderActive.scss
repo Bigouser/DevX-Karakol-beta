@@ -172,7 +172,7 @@
 			overflow: hidden;
 
 			display: block;
-			transform: scale(0.44);
+			transform: scale(0.4);
 
 			$background-line-color: #fff;
 			.burger__icon {
@@ -180,11 +180,11 @@
 				height: 45px;
 				position: relative;
 				transition-duration: 1s;
-				margin: 20px auto 20px auto;
+				// margin: 20px auto 20px auto;
 				cursor: pointer;
 				span {
-					top: 18px;
-					height: 9px;
+					top: 19px;
+					height: 7px;
 					width: 60px;
 					background-color: $background-line-color;
 					border-radius: 20px;
@@ -195,7 +195,7 @@
 						left: 0;
 						position: absolute;
 						top: -18px;
-						height: 9px;
+						height: 7px;
 						width: 60px;
 						background-color: $background-line-color;
 						content: "";
@@ -207,7 +207,7 @@
 						left: 0;
 						position: absolute;
 						top: 18px;
-						height: 9px;
+						height: 7px;
 						width: 60px;
 						background-color: $background-line-color;
 						content: "";
