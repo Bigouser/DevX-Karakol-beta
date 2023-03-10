@@ -7,7 +7,7 @@ import { Projects } from "../../pages/Projects";
 
 export const Main = () => {
 	return (
-		<div>
+		<div className="main">
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />

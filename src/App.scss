@@ -13,6 +13,9 @@ body {
 
 :root {
 	// todo light
+	// ! wrapper
+	--wrapper-bg-all-light: #ffffff;
+
 	// ! header
 	--header-scroll-light: #0c131b;
 	--header-ActScroll-light: #0c131be0;
@@ -22,12 +25,21 @@ body {
 	--header-border-light: rgba(255, 255, 255, 0.151);
 	--header-burger-menu-light: #0f1a25;
 
-	// ! wrapper
-	--wrapper-bg-all-light: #ffffff;
+	// ! main
 	--main-text-light: #0f1a25;
-	// --footer-text-light: #000000;
+
+	// ! footer
+	--footer-bg-light: #0c131b;
+	--footer-title-light: #fff;
+	--footer-text-light: #8b8c8e;
+	--footer-textHover-light: #fff;
+	--footer-icon-light: #272727;
+	--footer-iconHover-light: #5f62e2;
 
 	// todo dark
+	// ! wrapper
+	--wrapper-bg-all-dark: #0c131b;
+
 	// ! header
 	--header-scroll-dark: #00000000;
 	--header-ActScroll-dark: #1a2438ee;
@@ -37,15 +49,26 @@ body {
 	--header-border-dark: rgba(255, 255, 255, 0.151);
 	--header-burger-menu-dark: #1a2337;
 
-	// ! wrapper
-	--wrapper-bg-all-dark: #0c131b;
+	// ! main
 	--main-text-dark: #ffffff;
-	// --footer-text-dark: #ffffff;
+
+	// ! footer
+	--footer-bg-dark: #0c131b;
+	--footer-title-dark: #5f62e2;
+	--footer-text-dark: #8b8c8e;
+	--footer-textHover-dark: #fff;
+	--footer-icon-dark: #272727;
+	--footer-iconHover-dark: #5f62e2;
 }
 
-// ? light
+// todo light
 .layout {
-	// todo haeder
+	// ! wrapper
+	.wrapper {
+		background: var(--wrapper-bg-all-light);
+	}
+
+	// ! header
 	.header__jtsecn {
 		.headerScroll {
 			background: var(--header-scroll-light);
@@ -54,7 +77,7 @@ body {
 			background: var(--header-ActScroll-light);
 		}
 
-		// ! nav
+		// ? nav
 		.link {
 			a {
 				color: var(--header-text-light);
@@ -72,7 +95,7 @@ body {
 			}
 		}
 
-		// ! burger menu nav
+		// ? burger menu nav
 		.nav__burger__menu {
 			background: var(--header-burger-menu-light);
 			border: 1px solid var(--header-border-light);
@@ -94,23 +117,61 @@ body {
 		}
 	}
 
-	// ! wrapper
-	.wrapper {
-		background: var(--wrapper-bg-all-light);
+	// ! main
+	.main {
+		color: var(--main-text-light);
+	}
 
-		main {
-			color: var(--main-text-light);
+	// ! footer
+	.footer {
+		background-color: var(--footer-bg-light);
+
+		.footer__top {
+			.block {
+				p {
+					color: var(--footer-text-light);
+				}
+
+				h6 {
+					color: var(--footer-title-light);
+				}
+
+				a {
+					color: var(--footer-text-light);
+
+					&:hover {
+						color: var(--footer-textHover-light);
+					}
+				}
+			}
 		}
 
-		footer {
-			color: var(--footer-text-light);
+		.footer__bottom {
+			.copyright {
+				color: var(--footer-text-light);
+			}
+
+			.icons {
+				a {
+					background-color: var(--footer-icon-light);
+
+					&:hover {
+						background-color: var(--footer-iconHover-light);
+					}
+				}
+			}
 		}
 	}
 }
 
-// ? dark
+// todo dark
 .layout.dark {
-	// todo header
+	// ! wrapper
+	.wrapper {
+		background: var(--wrapper-bg-all-dark);
+	}
+
+	// ! header
 	.header__jtsecn {
 		.headerScroll {
 			background: var(--header-scroll-dark);
@@ -119,7 +180,7 @@ body {
 			background: var(--header-ActScroll-dark);
 		}
 
-		// ! nav
+		// ? nav
 		.link {
 			a {
 				color: var(--header-text-dark);
@@ -137,7 +198,7 @@ body {
 			}
 		}
 
-		// ! burger menu nav
+		// ? burger menu nav
 		.nav__burger__menu {
 			background: var(--header-burger-menu-dark);
 			border: 1px solid var(--header-border-dark);
@@ -159,16 +220,49 @@ body {
 		}
 	}
 
-	// ! wrapper
-	.wrapper {
-		background: var(--wrapper-bg-all-dark);
+	// ! main
+	.main {
+		color: var(--main-text-dark);
+	}
 
-		main {
-			color: var(--main-text-dark);
+	// ! footer
+	.footer {
+		background-color: var(--footer-bg-dark);
+
+		.footer__top {
+			.block {
+				p {
+					color: var(--footer-text-dark);
+				}
+
+				h6 {
+					color: var(--footer-title-dark);
+				}
+
+				a {
+					color: var(--footer-text-dark);
+
+					&:hover {
+						color: var(--footer-textHover-dark);
+					}
+				}
+			}
 		}
 
-		footer {
-			color: var(--footer-text-dark);
+		.footer__bottom {
+			.copyright {
+				color: var(--footer-text-dark);
+			}
+
+			.icons {
+				a {
+					background-color: var(--footer-icon-dark);
+
+					&:hover {
+						background-color: var(--footer-iconHover-dark);
+					}
+				}
+			}
 		}
 	}
 }

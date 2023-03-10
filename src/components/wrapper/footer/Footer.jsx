@@ -1,9 +1,9 @@
 import React from "react";
 import "../footer/Footer.scss";
 import devxLogo from "../../../assets/logo.png";
-import instIcon from "../../../assets/icons/instagram_icon.svg";
-import githubIcon from "../../../assets/icons/github_icon.svg";
-import discordIcon from "../../../assets/icons/discord_icon.svg";
+import instIcon from "../../../assets/icons/footer/instagram_icon.svg";
+import githubIcon from "../../../assets/icons/footer/github_icon.svg";
+import discordIcon from "../../../assets/icons/footer/discord_icon.svg";
 
 export const Footer = () => {
 	return (
@@ -43,13 +43,13 @@ export const Footer = () => {
 						</div>
 						<div className="icons">
 							<a href="">
-								<img src={instIcon} width={40} alt="inst" />
+								<img src={instIcon} alt="inst" />
 							</a>
 							<a href="">
-								<img src={githubIcon} width={40} alt="github" />
+								<img src={githubIcon} alt="github" />
 							</a>
 							<a href="">
-								<img src={discordIcon} width={40} alt="discord" />
+								<img src={discordIcon} alt="discord" />
 							</a>
 						</div>
 					</div>

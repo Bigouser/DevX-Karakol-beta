@@ -1,6 +1,4 @@
 .footer {
-	background-color: #0c131b;
-
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -33,25 +31,20 @@
 				font-weight: 600;
 				line-height: 1.25rem;
 				letter-spacing: -0.019rem;
-				color: #8b8c8e;
 			}
 
 			h6 {
 				margin: 25px 0 15px 0;
 				font-weight: bold;
 				font-size: 20px;
-				color: rgb(95, 98, 226);
 			}
 
 			a {
 				margin-bottom: 7px;
 				text-decoration: none;
 				font-weight: 700;
-				color: #8b8c8e;
 
-				&:hover {
-					color: white;
-				}
+				transition: 0.3s;
 			}
 		}
 	}
@@ -75,7 +68,6 @@
 		.copyright {
 			text-align: center;
 			font-weight: 700;
-			color: #8b8c8e;
 		}
 
 		.icons {
@@ -85,14 +77,15 @@
 			align-items: center;
 			a {
 				margin: 0 10px;
-				padding: 10px;
+				padding: 7px;
 
 				display: flex;
 				justify-content: center;
 				align-items: center;
 
 				border-radius: 50px;
-				background-color: rgb(225, 225, 225);
+
+				transition: 0.4s;
 
 				img {
 					width: 25px;
