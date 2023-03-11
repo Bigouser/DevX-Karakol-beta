@@ -23,6 +23,20 @@
 				line-height: 1.2;
 			}
 		}
+
+		.carousel {
+			position: relative;
+
+			@media (max-width: 500px) {
+				top: -25px;
+			}
+			@media (max-width: 450px) {
+				top: -30px;
+			}
+			@media (max-width: 400px) {
+				top: -35px;
+			}
+		}
 	}
 }
 

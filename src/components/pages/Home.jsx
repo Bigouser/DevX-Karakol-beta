@@ -12,7 +12,7 @@ export const Home = () => {
 							Welcome to <br /> DevX - Karakol website!
 						</h1>
 					</div>
-					<div>
+					<div className="carousel">
 						<TabCarousel />
 					</div>
 				</div>
