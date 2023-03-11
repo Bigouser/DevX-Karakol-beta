@@ -88,7 +88,10 @@ export const Header = () => {
 								))}
 								<NavLink
 									className="burger__menu__switch__theme"
-									onClick={() => setIsDark(!isDark)}>
+									onClick={() => {
+										setIsDark(!isDark);
+										setIsOpen(false);
+									}}>
 									<div
 										className="switch__theme"
 										onClick={() => setIsDark(!isDark)}>
