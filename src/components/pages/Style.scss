@@ -1,5 +1,4 @@
 // ! Home
-
 .home {
 	padding: 0 1rem 0 1rem;
 	display: flex;
@@ -9,11 +8,20 @@
 	text-align: center;
 
 	.content {
-		h1 {
-			font-weight: 800;
-			line-height: 1.2;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-			padding-bottom: 1rem;
+		@media (max-width: 1115px) {
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.title {
+			h1 {
+				font-weight: 800;
+				line-height: 1.2;
+			}
 		}
 	}
 }

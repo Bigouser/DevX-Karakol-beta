@@ -1,11 +1,11 @@
 import React from "react";
-import scss from "./Style.module.scss";
+import "./Style.scss";
 
 export const About = () => {
 	return (
-		<div className={scss.about}>
+		<div className="about">
 			<div className="container">
-				<div className={scss.content}>
+				<div className="content">
 					<h1>About</h1>
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea odit

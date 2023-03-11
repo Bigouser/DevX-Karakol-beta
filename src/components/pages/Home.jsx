@@ -1,14 +1,20 @@
 import React from "react";
-import scss from "./Style.module.scss";
+import "./Style.scss";
+import { TabCarousel } from "../carousel/TabCarousel";
 
 export const Home = () => {
 	return (
-		<div className={scss.home}>
+		<div className="home">
 			<div className="container">
-				<div className={scss.content}>
-					<h1>
-						Welcome to <br /> DevX - Karakol website!
-					</h1>
+				<div className="content">
+					<div className="title">
+						<h1>
+							Welcome to <br /> DevX - Karakol website!
+						</h1>
+					</div>
+					<div>
+						<TabCarousel />
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,11 +1,11 @@
 import React from "react";
-import scss from "./Style.module.scss";
+import "./Style.scss";
 
 export const Contact = () => {
 	return (
-		<div className={scss.contact}>
+		<div className="contact">
 			<div className="container">
-				<div className={scss.content}>
+				<div className="content">
 					<h1>Contact</h1>
 				</div>
 			</div>

@@ -1,27 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
 
-// ::-webkit-scrollbar {
-// 	width: 7px;
-// }
-
-// ::-webkit-scrollbar-track {
-// 	background-color: #212529;
-// 	-webkit-box-shadow: 0px 5px 10px red;
-// 	box-shadow: 0px 5px 10px red;
-// }
-
-// ::-webkit-scrollbar-thumb {
-// 	background: -webkit-gradient(
-// 		linear,
-// 		left top,
-// 		left bottom,
-// 		from(red),
-// 		to(#002fff)
-// 	);
-// 	background: linear-gradient(to bottom, red, #002fff);
-// 	border-radius: 15px;
-// }
-
 ::-webkit-scrollbar {
 	width: 8px;
 }
@@ -42,10 +20,4 @@
 	box-sizing: border-box;
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
-	// !
-	// padding: 0;
-	// list-style: none;
-	// text-decoration: none;
-	// border: none;
-	// background: transparent;
 }
