@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "./Carousel.scss";
+import "./TabCarousel.scss";
 
 import TabImage1 from "./img/people/1.webp";
 import TabImage2 from "./img/people/2.webp";

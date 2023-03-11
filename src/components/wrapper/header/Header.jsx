@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../../hook/useTheme";
 import { Logout } from "../../auth/Logout";
-import "./HeaderActive.scss";
+import "./Header.scss";
 
 import pic from "../../../assets/logo.png";
 import sun from "../../../assets/icons/sun.svg";
@@ -66,9 +66,7 @@ export const Header = () => {
 											<img src={moon} alt="moon" />
 										)}
 									</div>
-									<div className="logout">
-										<Logout />
-									</div>
+									<Logout />
 								</div>
 							</div>
 
@@ -103,9 +101,7 @@ export const Header = () => {
 									Switch Theme
 								</NavLink>
 								<div className="right">
-									<div className="logout menu__logout">
-										<Logout />
-									</div>
+									<Logout />
 								</div>
 							</div>
 

@@ -80,9 +80,13 @@
 		margin: 0 20px;
 		border-radius: 50%;
 
+		transition: all 0.3s ease-in-out;
+
 		cursor: pointer;
 
-		transition: all 0.3s ease-in-out;
+		@media (max-width: 700px) {
+			cursor: default;
+		}
 
 		img {
 			$theme_size: 27px;
@@ -128,6 +132,10 @@
 			text-decoration: none;
 
 			transition: 0.3s;
+
+			@media (max-width: 700px) {
+				cursor: default;
+			}
 		}
 
 		.burger__menu__switch__theme {
