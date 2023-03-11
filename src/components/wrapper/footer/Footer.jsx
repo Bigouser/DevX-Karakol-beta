@@ -39,7 +39,7 @@ export const Footer = () => {
 					<hr />
 					<div className="footer__bottom">
 						<div className="copyright">
-							Copyright © 2023 WEDEVX | Powered by WEDEVX
+							Copyright © 2023 DevX | Powered by Elcho911
 						</div>
 						<div className="icons">
 							<a href="">
