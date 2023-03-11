@@ -114,7 +114,7 @@
 				cursor: pointer;
 				transition: 0.4s;
 
-				@media (max-width: 500px) {
+				@media (max-width: 700px) {
 					cursor: default;
 				}
 
@@ -286,7 +286,7 @@
 			transform: scale(0.6);
 		}
 		@media (max-width: 390px) {
-			transform: scale(0.58);
+			transform: scale(0.59);
 		}
 		@media (max-width: 370px) {
 			transform: scale(0.56);
