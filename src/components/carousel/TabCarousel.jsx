@@ -77,8 +77,15 @@ export const TabCarousel = () => {
 								key={index}
 								onClick={() => handleTabClick(index)}
 								className={index === activeTab ? "button active" : "button"}>
-								<img src={tab.company} alt="company" />
-								<p>{tab.label}</p>
+								<div
+									className={
+										index === activeTab ? "company active" : "company"
+									}>
+									<img src={tab.company} alt="company" />
+								</div>
+								<div className={index === activeTab ? "role active" : "role"}>
+									<p>{tab.label}</p>
+								</div>
 							</div>
 						))}
 					</div>

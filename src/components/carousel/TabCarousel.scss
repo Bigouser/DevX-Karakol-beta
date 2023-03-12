@@ -1,11 +1,13 @@
 :root {
 	// todo light
 	--carousel-bg-button-light: #ffffff;
+	--carousel-inside-bg-button-light: #f4f4f4;
 	--carousel-text-light: #000000;
 	--carousel-box-shadow-light: rgba(0, 0, 0, 0.18);
 
 	// todo dark
-	--carousel-bg-button-dark: #3C3C3C;
+	--carousel-bg-button-dark: #313131;
+	--carousel-inside-bg-button-dark: #424242;
 	--carousel-text-dark: #ffffff;
 	--carousel-box-shadow-dark: rgba(255, 255, 255, 0.18);
 }
@@ -17,17 +19,23 @@
 		.carousel {
 			.tabs {
 				.button {
-					p {
-						color: var(--carousel-text-light);
-					}
-
-					&::after {
-						background: url(./img/company/close.png) center/cover no-repeat;
-					}
+					background: var(--carousel-bg-button-light);
+					color: var(--carousel-text-light);
 
 					&.active {
-						background: var(--carousel-bg-button-light);
 						box-shadow: 0px 10px 30px var(--carousel-box-shadow-light);
+					}
+
+					.company {
+						&::after {
+							background: var(--carousel-inside-bg-button-light);
+						}
+					}
+
+					.role {
+						&::after {
+							background: var(--carousel-inside-bg-button-light);
+						}
 					}
 				}
 			}
@@ -51,17 +59,23 @@
 		.carousel {
 			.tabs {
 				.button {
-					p {
-						color: var(--carousel-text-dark);
-					}
-
-					&::after {
-						background: url(./img/company/close-dark.jpg) center/cover no-repeat;
-					}
+					background: var(--carousel-bg-button-dark);
+					color: var(--carousel-text-dark);
 
 					&.active {
-						background: var(--carousel-bg-button-dark);
 						box-shadow: 0px 10px 30px var(--carousel-box-shadow-dark);
+					}
+
+					.company {
+						&::after {
+							background: var(--carousel-inside-bg-button-dark);
+						}
+					}
+
+					.role {
+						&::after {
+							background: var(--carousel-inside-bg-button-dark);
+						}
 					}
 				}
 			}
@@ -101,6 +115,7 @@
 
 		.tabs {
 			.button {
+				padding: 12px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -108,7 +123,6 @@
 				position: relative;
 
 				width: 140px;
-				height: 60px;
 				border-radius: 10px;
 
 				cursor: pointer;
@@ -118,35 +132,62 @@
 					cursor: default;
 				}
 
-				img {
-					width: 70px;
+				.company {
+					position: relative;
+
+					display: flex;
+					align-items: center;
+
+					img {
+						position: relative;
+						left: 2px;
+						height: 18px;
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						background: #f4f4f4;
+						border-radius: 6px;
+						width: 65px;
+						height: 19px;
+					}
+					&.active::after {
+						opacity: 0;
+					}
 				}
 
-				p {
-					margin-top: 5px;
-					font-size: 12px;
-					font-weight: 500;
-				}
+				.role {
+					position: relative;
 
-				&::after {
-					content: "";
-					position: absolute;
-					left: 0;
-					top: 0;
-					// background: url(./img/company/close.png) center/cover no-repeat;
-					border-radius: 10px;
-					width: 100%;
-					height: 100%;
-				}
+					margin-top: 7px;
 
-				&.active::after {
-					opacity: 0;
-				}
+					p {
+						position: relative;
+						left: 2px;
 
-				&.active {
-					padding: 12px;
-					// background: #fff;
-					// box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18);
+						font-size: 12px;
+						font-weight: 500;
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+
+						background: #f4f4f4;
+						border-radius: 6px;
+						width: 120px;
+						height: 16px;
+					}
+					&.active::after {
+						opacity: 0;
+					}
 				}
 
 				&:nth-child(1) {
