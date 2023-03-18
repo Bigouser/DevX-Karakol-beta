@@ -1,0 +1,82 @@
+.switch__theme__daefeef {
+	position: relative;
+	.dark_mode {
+		max-height: 23px;
+	}
+
+	.dark_mode_label {
+		position: relative;
+		top: -18px;
+
+		width: 43px;
+		height: 23px;
+		position: relative;
+		display: block;
+		background: #e6e6e6;
+		border: 2px solid #c0c0c2;
+
+		border-radius: 100px;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			border: 2px solid #7a7a86;
+		}
+
+		@media (max-width: 700px) {
+			cursor: default;
+
+			&:hover {
+				border: 2px solid #c0c0c2;
+			}
+		}
+
+		&::after {
+			content: "";
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			top: 50%;
+			left: 1px;
+			transform: translateY(-50%);
+			background: url(./icons/sun.svg) no-repeat center/cover;
+			background-color: white;
+			border: 2px solid transparent;
+			border-radius: 100px;
+			transition: 0.2s;
+		}
+
+		&:active:after {
+			width: 18px;
+		}
+	}
+
+	.dark_mode_input {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+
+		&:checked + .dark_mode_label {
+			background: #313136;
+			border: 2px solid #48484d;
+
+			&:hover {
+				border: 2px solid #94949b;
+			}
+
+			@media (max-width: 700px) {
+				&:hover {
+					border: 2px solid #48484d;
+				}
+			}
+		}
+
+		&:checked + .dark_mode_label:after {
+			left: 38px;
+			transform: translate(-100%, -50%);
+			background: url(./icons/moon.svg) no-repeat center/cover;
+			background-color: #000;
+			border: 2px solid transparent;
+		}
+	}
+}
