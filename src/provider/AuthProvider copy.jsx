@@ -13,10 +13,20 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 
+	const browser = window.navigator.userAgent.toLowerCase();
+	const isYandex = browser.includes("yandex");
+	const isChrome = browser.includes("chrome");
+	const isFirefox = browser.includes("firefox");
+	const isEdge = browser.includes("edge");
+	const isSafari = browser.includes("safari");
+
 	const googleSignIn = () => {
 		const provider = new GoogleAuthProvider();
-		// signInWithPopup(auth, provider);
-		signInWithRedirect(auth, provider)
+		if (isYandex || isChrome || isFirefox || isEdge) {
+			signInWithRedirect(auth, provider);
+		} else if (isSafari) {
+			signInWithPopup(auth, provider);
+		}
 	};
 
 	const logOut = () => {
@@ -26,7 +36,7 @@ export const AuthProvider = ({ children }) => {
 	useEffect(() => {
 		const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
 			setUser(currentUser);
-			console.log("User", currentUser);
+			// console.log("User", currentUser);
 		});
 		return () => {
 			unsubscribe();
