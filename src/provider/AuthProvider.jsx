@@ -13,10 +13,15 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 
-	const googleSignIn = () => {
-		const provider = new GoogleAuthProvider();
-		signInWithRedirect(auth, provider);
-		signInWithPopup(auth, provider);
+	const googleSignIn = async () => {
+		try {
+			const provider = new GoogleAuthProvider();
+			await signInWithRedirect(auth, provider);
+		} catch (error) {
+			console.log("Redirect sign in failed, trying popup sign in:", error);
+			const provider = new GoogleAuthProvider();
+			await signInWithPopup(auth, provider);
+		}
 	};
 
 	const logOut = () => {
