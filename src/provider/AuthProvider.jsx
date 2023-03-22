@@ -1,8 +1,9 @@
 import { useContext, createContext, useEffect, useState } from "react";
 import {
 	GoogleAuthProvider,
-	signInWithPopup,
 	signInWithRedirect,
+	getAuth,
+	getRedirectResult,
 	signOut,
 	onAuthStateChanged
 } from "firebase/auth";
@@ -14,18 +15,23 @@ export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 
 	const googleSignIn = async () => {
+		const provider = new GoogleAuthProvider();
 		try {
-			const provider = new GoogleAuthProvider();
 			await signInWithRedirect(auth, provider);
+			const result = await getRedirectResult(auth);
+			setUser(result.user);
 		} catch (error) {
-			console.log("Redirect sign in failed, trying popup sign in:", error);
-			const provider = new GoogleAuthProvider();
-			await signInWithPopup(auth, provider);
+			console.log(error);
 		}
 	};
 
-	const logOut = () => {
-		signOut(auth);
+	const logOut = async () => {
+		try {
+			await signOut(auth);
+			setUser(null);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	useEffect(() => {
