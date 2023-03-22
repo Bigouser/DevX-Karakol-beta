@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./SwiperCarousel.scss";
-import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
+import { EffectCoverflow, Pagination, Navigation, Autoplay, FreeMode } from "swiper";
 
 import pic from "./img-slider/Elcho911.webp";
 
@@ -18,11 +18,12 @@ export const SwiperCarousel = () => {
 	};
 
 	const options = {
-		modules: [EffectCoverflow, Pagination, Navigation, Autoplay],
+		modules: [EffectCoverflow, Pagination, Navigation, Autoplay, FreeMode],
 		effect: "coverflow",
 		spaceBetween: 30,
 		grabCursor: true,
 		centeredSlides: true,
+		freeMode: false,
 		breakpoints: {
 			0: {
 				slidesPerView: "auto"
