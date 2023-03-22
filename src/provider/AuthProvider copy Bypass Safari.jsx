@@ -1,8 +1,8 @@
 import { useContext, createContext, useEffect, useState } from "react";
 import {
 	GoogleAuthProvider,
-	signInWithPopup,
 	signInWithRedirect,
+	getRedirectResult,
 	signOut,
 	onAuthStateChanged
 } from "firebase/auth";
@@ -15,25 +15,19 @@ export const AuthProvider = ({ children }) => {
 
 	const googleSignIn = async () => {
 		const provider = new GoogleAuthProvider();
-		if (
-			navigator.userAgent.includes("Safari") &&
-			!navigator.userAgent.includes("Chrome")
-		) {
-			try {
-				const result = await signInWithPopup(auth, provider);
-				setUser(result.user);
-				console.log("User", result.user);
-			} catch (error) {
-				console.log(error);
-			}
-		} else {
-			signInWithRedirect(auth, provider);
+		try {
+			await signInWithRedirect(auth, provider);
+			const result = await getRedirectResult(auth);
+			setUser(result.user);
+		} catch (error) {
+			console.log(error);
 		}
 	};
 
 	const logOut = async () => {
 		try {
 			await signOut(auth);
+			setUser(null);
 		} catch (error) {
 			console.log(error);
 		}

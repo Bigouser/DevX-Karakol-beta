@@ -13,30 +13,23 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 
-	const googleSignIn = async () => {
-		const provider = new GoogleAuthProvider();
-		if (
-			navigator.userAgent.includes("Safari") &&
-			!navigator.userAgent.includes("Chrome")
-		) {
-			try {
-				const result = await signInWithPopup(auth, provider);
-				setUser(result.user);
-				console.log("User", result.user);
-			} catch (error) {
-				console.log(error);
-			}
-		} else {
-			signInWithRedirect(auth, provider);
-		}
-	};
+	const googleSignIn = () => {
+    const provider = new GoogleAuthProvider();
+    if (navigator.userAgent.includes("Safari") && !navigator.userAgent.includes("Chrome")) {
+        auth.signInWithPopup(provider)
+        .then((result) => {
+            setUser(result.user);
+            console.log("User", result.user);
+        }).catch((error) => {
+            console.log(error);
+        });
+    } else {
+        signInWithRedirect(auth, provider);
+    }
+};
 
-	const logOut = async () => {
-		try {
-			await signOut(auth);
-		} catch (error) {
-			console.log(error);
-		}
+	const logOut = () => {
+		signOut(auth);
 	};
 
 	useEffect(() => {
