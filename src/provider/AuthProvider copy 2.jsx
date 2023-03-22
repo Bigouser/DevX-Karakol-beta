@@ -13,24 +13,36 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 
-	const browser = window.navigator.userAgent.toLowerCase();
-	const isYandex = browser.includes("yandex");
-	const isChrome = browser.includes("chrome");
-	const isFirefox = browser.includes("firefox");
-	const isEdge = browser.includes("edge");
-	const isSafari = browser.includes("safari");
-
-	const googleSignIn = () => {
+	const googleSignIn = async () => {
 		const provider = new GoogleAuthProvider();
-		if (isYandex || isChrome || isFirefox || isEdge) {
-			signInWithRedirect(auth, provider);
-		} else if (isSafari) {
-			signInWithPopup(auth, provider);
+		if (
+			!navigator.userAgent.includes("Safari") &&
+			navigator.userAgent.includes("Chrome")
+		) {
+			try {
+				const result = await signInWithPopup(auth, provider);
+				setUser(result.user);
+				console.log("Apple user", result.user);
+			} catch (error) {
+				console.log(error);
+			}
+		} else {
+			try {
+				const result = await signInWithRedirect(auth, provider);
+				setUser(result.user);
+				console.log("Android user", result.user);
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
 
-	const logOut = () => {
-		signOut(auth);
+	const logOut = async () => {
+		try {
+			await signOut(auth);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	useEffect(() => {
