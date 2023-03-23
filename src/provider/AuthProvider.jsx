@@ -20,8 +20,8 @@ export const AuthProvider = ({ children }) => {
 		let signInMethod;
 
 		switch (true) {
-			case browser.includes("yandex"):
 			case browser.includes("chrome"):
+			case browser.includes("yandex"):
 			case browser.includes("edge"):
 			case browser.includes("opera"):
 				signInMethod = signInWithRedirect;
