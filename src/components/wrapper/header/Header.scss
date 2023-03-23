@@ -135,6 +135,8 @@
 		// ? dropdown language menu for desktop
 		.dropdown__language__menu__for__desktop__fthsrtg {
 			position: relative;
+			height: 100%;
+			max-height: 40px;
 			padding: 21px 40px 21px 12px;
 			font-weight: 500;
 			cursor: pointer;
