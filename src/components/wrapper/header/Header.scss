@@ -48,9 +48,6 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-
-		// ! Safari
-		position: relative;
 	}
 
 	.left {
@@ -151,8 +148,6 @@
 			}
 
 			span {
-				position: relative;
-
 				.arrow__icon__V1 {
 					position: absolute;
 					top: 53%;
