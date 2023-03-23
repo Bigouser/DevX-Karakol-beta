@@ -13,20 +13,26 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({});
 
-	const browser = window.navigator.userAgent.toLowerCase();
-	const isYandex = browser.includes("yandex");
-	const isChrome = browser.includes("chrome");
-	const isFirefox = browser.includes("firefox");
-	const isEdge = browser.includes("edge");
-	const isSafari = browser.includes("safari");
-
 	const googleSignIn = () => {
 		const provider = new GoogleAuthProvider();
-		if (isYandex || isChrome || isFirefox || isEdge) {
-			signInWithRedirect(auth, provider);
-		} else if (isSafari) {
-			signInWithPopup(auth, provider);
+
+		const browser = window.navigator.userAgent.toLowerCase();
+		let signInMethod;
+
+		switch (true) {
+			case browser.includes("yandex"):
+			case browser.includes("chrome"):
+			case browser.includes("firefox"):
+			case browser.includes("edge"):
+				signInMethod = signInWithRedirect;
+				break;
+			case browser.includes("safari"):
+				signInMethod = signInWithPopup;
+				break;
+			default:
+				signInMethod = signInWithRedirect;
 		}
+		signInMethod(auth, provider);
 	};
 
 	const logOut = () => {
