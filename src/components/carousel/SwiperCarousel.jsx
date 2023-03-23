@@ -23,7 +23,7 @@ export const SwiperCarousel = () => {
 		spaceBetween: 30,
 		grabCursor: true,
 		centeredSlides: true,
-		freeMode: false,
+		freeMode: true,
 		breakpoints: {
 			0: {
 				slidesPerView: "auto"
