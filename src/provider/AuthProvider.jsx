@@ -28,6 +28,7 @@ export const AuthProvider = ({ children }) => {
 				break;
 			case browser.includes("safari"):
 			case browser.includes("firefox"):
+			case browser.includes("Internet Explorer"):
 				signInMethod = signInWithPopup;
 				break;
 			default:
