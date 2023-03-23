@@ -22,12 +22,12 @@ export const AuthProvider = ({ children }) => {
 		switch (true) {
 			case browser.includes("yandex"):
 			case browser.includes("chrome"):
-			case browser.includes("firefox"):
 			case browser.includes("edge"):
 			case browser.includes("opera"):
 				signInMethod = signInWithRedirect;
 				break;
 			case browser.includes("safari"):
+			case browser.includes("firefox"):
 				signInMethod = signInWithPopup;
 				break;
 			default:
