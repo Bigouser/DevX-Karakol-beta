@@ -125,6 +125,7 @@
 	}
 
 	.right {
+		position: relative;
 		display: flex;
 		align-items: center;
 
@@ -196,21 +197,6 @@
 				opacity: 1;
 				visibility: visible;
 				transform: none;
-			}
-		}
-
-		/* Добавлено */
-		@supports (-webkit-appearance: none) {
-			.dropdown__language__menu__for__desktop__fthsrtg {
-				padding-right: 30px;
-			}
-
-			.dropdown__language__menu__for__desktop__fthsrtg span .arrow__icon__V1 {
-				right: -20px;
-			}
-
-			.dropdown__language__menu__for__desktop__fthsrtg span .arrow__icon__V2 {
-				right: -40px;
 			}
 		}
 	}
