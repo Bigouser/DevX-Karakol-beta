@@ -82,8 +82,11 @@
 			.arrow__icon {
 				transition: 0.3s;
 			}
-			span {
+			.icon {
 				position: relative;
+			}
+
+			span {
 				.arrow__icon {
 					position: absolute;
 					top: 53%;
