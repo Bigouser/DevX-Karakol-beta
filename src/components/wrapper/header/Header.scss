@@ -73,7 +73,7 @@
 
 		// ? dropdown menu for desktop
 		.dropdown {
-			position: relative;	
+			position: relative;
 			padding: 10px 30px 10px 12px;
 			font-weight: 500;
 			cursor: pointer;
@@ -170,7 +170,7 @@
 				padding: 10px;
 				display: flex;
 				flex-direction: column;
-				box-shadow: 0px 5px 20px #00000046;
+				box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.46);
 
 				border-radius: 10px;
 				transform: scale(0.8) translateZ(0);
@@ -196,6 +196,21 @@
 				opacity: 1;
 				visibility: visible;
 				transform: none;
+			}
+		}
+
+		/* Добавлено */
+		@supports (-webkit-appearance: none) {
+			.dropdown__language__menu__for__desktop__fthsrtg {
+				padding-right: 30px;
+			}
+
+			.dropdown__language__menu__for__desktop__fthsrtg span .arrow__icon__V1 {
+				right: -20px;
+			}
+
+			.dropdown__language__menu__for__desktop__fthsrtg span .arrow__icon__V2 {
+				right: -40px;
 			}
 		}
 	}
