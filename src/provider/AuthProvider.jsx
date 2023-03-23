@@ -27,9 +27,9 @@ export const AuthProvider = ({ children }) => {
 			case browser.includes("opera"):
 				signInMethod = signInWithRedirect;
 				break;
-			case browser.includes("safari"):
-				signInMethod = signInWithPopup;
-				break;
+			// case browser.includes("safari"):
+			// 	signInMethod = signInWithPopup;
+			// 	break;
 			default:
 				signInMethod = signInWithPopup;
 		}
