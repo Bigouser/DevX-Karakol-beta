@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { useTheme } from "../../hook/useTheme";
 import "./SwitchTheme.scss";
 
-export const SwitchTheme = () => {
+export const SwitchTheme: FC = () => {
 	const { isDark, setIsDark } = useTheme();
 
 	const toggleTheme = () => {

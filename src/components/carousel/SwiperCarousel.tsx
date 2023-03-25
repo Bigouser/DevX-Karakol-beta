@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { FC, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -9,21 +9,34 @@ import {
 	Pagination,
 	Navigation,
 	Autoplay,
-	FreeMode
+	FreeMode,
+	SwiperOptions,
+	// @ts-ignore
+	AutoplayCallback
 } from "swiper";
 
 import pic from "./img-slider/Elcho911.webp";
 
-export const SwiperCarousel = () => {
-	const [swiper, setSwiper] = useState(null);
-	const progressCircle = useRef(null);
-	const progressContent = useRef(null);
-	const onAutoplayTimeLeft = (s, time, progress) => {
-		progressCircle.current.style.setProperty("--progress", 1 - progress);
-		progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+interface Slide {
+	id: number;
+	imgSrc: string;
+	name: string;
+	position: string;
+}
+
+export const SwiperCarousel: FC = () => {
+	const progressCircle = useRef<SVGSVGElement>(null);
+	const progressContent = useRef<HTMLSpanElement>(null);
+	const onAutoplayTimeLeft: AutoplayCallback = (s: any, time: any, progress: any) => {
+		if (progressCircle.current) {
+			progressCircle.current.style.setProperty("--progress", `${1 - progress}`);
+		}
+		if (progressContent.current) {
+			progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+		}
 	};
 
-	const options = {
+	const options: SwiperOptions = {
 		modules: [EffectCoverflow, Pagination, Navigation, Autoplay, FreeMode],
 		effect: "coverflow",
 		spaceBetween: 30,
@@ -54,6 +67,7 @@ export const SwiperCarousel = () => {
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
+			// @ts-ignore
 			clickable: true
 		},
 		loop: true,
@@ -64,7 +78,7 @@ export const SwiperCarousel = () => {
 		onAutoplayTimeLeft: onAutoplayTimeLeft
 	};
 
-	const slides = [
+	const slides: Slide[] = [
 		{
 			id: 1,
 			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=1",
@@ -163,15 +177,13 @@ export const SwiperCarousel = () => {
 		}
 	];
 
-	const slideTo = (index) => swiper.slideTo(index);
-
 	return (
 		<>
-			<Swiper {...options} onSwiper={setSwiper}>
-				{slides.map((slide, index) => (
+			<Swiper {...options}>
+				{slides.map((slide) => (
 					<SwiperSlide key={slide.id}>
 						<div className="card">
-							<img src={slide.imgSrc} />
+							<img src={slide.imgSrc} alt={slide.name} />
 							<div className="about__people">
 								<h2>{slide.name}</h2>
 								<p>{slide.position}</p>

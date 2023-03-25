@@ -1,4 +1,6 @@
-import { useState, useEffect, useRef, useContext } from "react";
+// noinspection TypeScriptValidateTypes
+
+import { FC, useState, useEffect, useRef, useContext } from "react";
 import "./TabCarousel.scss";
 
 import TabImage1 from "./img/people/1.webp";
@@ -12,31 +14,40 @@ import company2 from "./img/company/2.png";
 import company3 from "./img/company/3.png";
 import company4 from "./img/company/4.png";
 import company5 from "./img/company/5.png";
-import { TranslatorContext } from "../../provider/TranslatorProvider";
+import { TranslatorContext } from "../../provider/TranslatorProvider.js";
 
-export const TabCarousel = () => {
-	const [activeTab, setActiveTab] = useState(0);
-	const intervalIdRef = useRef(null); // создаем ref
+interface Tab {
+	area: string;
+	label: string;
+	company: string;
+	image: string;
+}
+
+export const TabCarousel: FC = () => {
+	const [activeTab, setActiveTab] = useState<number>(0);
+	const intervalIdRef = useRef<number | null>(null); // создаем ref
 	const { t } = useContext(TranslatorContext);
 
 	useEffect(() => {
 		const id = setInterval(() => {
 			setActiveTab((activeTab) => (activeTab + 1) % tabs.length);
 		}, 3000);
+		// @ts-ignore
 		intervalIdRef.current = id; // сохраняем ссылку в ref
 		return () => clearInterval(id);
 	}, []);
 
-	const handleTabClick = (index) => {
-		clearInterval(intervalIdRef.current); // используем сохраненную ссылку
+	const handleTabClick = (index: number) => {
+		clearInterval(intervalIdRef.current!); // используем сохраненную ссылку
 		setActiveTab(index);
 		const newIntervalId = setInterval(() => {
 			setActiveTab((activeTab) => (activeTab + 1) % tabs.length);
 		}, 3000);
+		// @ts-ignore
 		intervalIdRef.current = newIntervalId; // обновляем ссылку в ref
 	};
 
-	const tabs = [
+	const tabs: Tab[] = [
 		{
 			area: t("TabCarousel__area1"),
 			label: t("TabCarousel__label1"),
@@ -74,14 +85,16 @@ export const TabCarousel = () => {
 			<div className="position">
 				<div className="carousel">
 					<div className="tabs">
-						{tabs.map((tab, index) => (
+						{tabs.map((tab: Tab, index: number) => (
 							<div
 								key={index}
 								onClick={() => handleTabClick(index)}
 								className={index === activeTab ? "button active" : "button"}
 							>
 								<div
-									className={index === activeTab ? "company active" : "company"}
+									className={
+										index === activeTab ? "company active" : "company"
+									}
 								>
 									<img src={tab.company} alt="company" />
 								</div>
@@ -91,7 +104,7 @@ export const TabCarousel = () => {
 							</div>
 						))}
 					</div>
-					{tabs.map((tab, index) => (
+					{tabs.map((tab: Tab, index: number) => (
 						<div
 							key={index}
 							className={

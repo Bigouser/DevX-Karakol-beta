@@ -1,30 +1,31 @@
 {
-  "name": "DevX-KG",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "classnames": "^2.3.2",
-    "firebase": "^9.17.2",
-    "i18next": "^22.4.11",
-    "i18next-browser-languagedetector": "^7.0.1",
-    "i18next-http-backend": "^2.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^12.2.0",
-    "react-router-dom": "^6.8.2",
-    "sass": "^1.58.3",
-    "swiper": "^9.1.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react-swc": "^3.0.0",
-    "vite": "^4.1.0"
-  }
+	"name": "devx-karakol-tsx",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"classnames": "^2.3.2",
+		"firebase": "^9.17.2",
+		"i18next": "^22.4.11",
+		"i18next-browser-languagedetector": "^7.0.1",
+		"i18next-http-backend": "^2.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-i18next": "^12.2.0",
+		"react-router-dom": "^6.8.2",
+		"sass": "^1.58.3",
+		"swiper": "^9.1.1"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.28",
+		"@types/react-dom": "^18.0.11",
+		"@vitejs/plugin-react-swc": "^3.0.0",
+		"typescript": "^4.9.3",
+		"vite": "^4.2.0"
+	}
 }

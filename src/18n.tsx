@@ -1,4 +1,6 @@
+// @ts-ignore
 import i18n from "i18next";
+// @ts-ignore
 import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
@@ -9,7 +11,7 @@ i18n
 	.use(initReactI18next)
 	.init({
 		fallbackLng: "en",
-		debug: false, // ? это аналог console.log()
+		debug: false,
 		detection: {
 			order: ["localStorage", "navigator"],
 			caches: ["localStorage"]
@@ -26,5 +28,3 @@ i18n
 			useSuspense: false
 		}
 	});
-
-export default i18n;

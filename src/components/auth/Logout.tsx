@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { UserAuth } from "../../provider/AuthProvider.jsx";
+import React, { FC, useContext } from "react";
+import { UserAuth } from "../../provider/AuthProvider";
 
 import "./Auth.scss";
-import { TranslatorContext } from "../../provider/TranslatorProvider.jsx";
+import { TranslatorContext } from "../../provider/TranslatorProvider";
 
-export const Logout = () => {
+export const Logout: FC = () => {
 	const { logOut, user } = UserAuth();
 	const { t } = useContext(TranslatorContext);
 

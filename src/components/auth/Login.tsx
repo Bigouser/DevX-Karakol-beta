@@ -1,18 +1,19 @@
-import React, { useEffect } from "react";
-import { UserAuth } from "../../provider/AuthProvider.jsx";
+import React, { FC, useEffect } from "react";
+import { UserAuth } from "../../provider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 
 import pic from "../../assets/logo.png";
 import google_icon from "../../assets/icons/google_icon.svg";
 import "./Auth.scss";
 
-export const Registration = () => {
+export const Login: FC = () => {
 	const { googleSignIn, user } = UserAuth();
 	const navigate = useNavigate();
 
 	const handleGoogleSignIn = async () => {
 		try {
 			const success = await googleSignIn();
+			// @ts-ignore
 			if (success) {
 				navigate("/");
 			}
@@ -32,12 +33,11 @@ export const Registration = () => {
 			<div className="style">
 				<img className="logo" src={pic} alt="DevX Logo" />
 				<h1>
-					Welcome
-					<span>!</span>
+					Welcome <span>back</span>
 				</h1>
 				<div className="submit" onClick={handleGoogleSignIn}>
 					<img src={google_icon} alt="" />
-					<p>Sign up with Google</p>
+					<p>Log in with Google</p>
 				</div>
 				<p className="documentation">
 					By signing up, you agree to our{" "}
@@ -52,7 +52,7 @@ export const Registration = () => {
 					.
 				</p>
 				<p className="switch">
-					Already have an account? <Link to="/login">Login</Link>
+					Do not have an account? <Link to="/register">Register</Link>
 				</p>
 			</div>
 		</div>

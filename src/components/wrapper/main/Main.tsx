@@ -3,11 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from "../../pages/Home";
 import { About } from "../../pages/About";
 import { Contact } from "../../pages/Contact";
-import { FullStack } from "../../pages/projects/FullStack.jsx";
-import { Sdet } from "../../pages/projects/Sdet.jsx";
-import { UiUx } from "../../pages/projects/UiUx.jsx";
+import { FullStack } from "../../pages/projects/FullStack";
+import { Sdet } from "../../pages/projects/Sdet";
+import { UiUx } from "../../pages/projects/UiUx";
 
-export const Main = () => {
+export const Main: React.FC = () => {
 	return (
 		<div className="main">
 			<Routes>

@@ -1,9 +1,24 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { FC, ReactNode, useState, useEffect, createContext } from "react";
 import { useTranslation } from "react-i18next";
 
-export const TranslatorContext = createContext();
+interface TranslatorProviderProps {
+	children: ReactNode;
+}
 
-export const TranslatorProvider = ({ children }) => {
+interface TranslatorContextValues {
+	t: Function;
+	changeLanguage: (language: string) => Promise<void>;
+	isInitialized: boolean;
+}
+
+export const TranslatorContext = createContext<TranslatorContextValues>({
+	t: () => "",
+	changeLanguage: async () => {
+	},
+	isInitialized: false
+});
+
+export const TranslatorProvider: FC<TranslatorProviderProps> = ({ children }) => {
 	const { t, i18n } = useTranslation();
 	const [isInitialized, setIsInitialized] = useState(false);
 
@@ -15,7 +30,7 @@ export const TranslatorProvider = ({ children }) => {
 		loadNamespaces();
 	}, [i18n]);
 
-	const changeLanguage = async (language) => {
+	const changeLanguage = async (language: string) => {
 		await i18n.changeLanguage(language);
 		await i18n.loadNamespaces("translation");
 	};
@@ -23,7 +38,7 @@ export const TranslatorProvider = ({ children }) => {
 	const contextValues = {
 		t,
 		changeLanguage,
-		isInitialized,
+		isInitialized
 	};
 
 	if (!isInitialized) {

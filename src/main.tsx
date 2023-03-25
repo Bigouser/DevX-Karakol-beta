@@ -5,10 +5,10 @@ import { App } from "./App";
 import "./index.scss";
 import "./18n";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
 		<BrowserRouter>
 			<App />
 		</BrowserRouter>
-	</React.StrictMode>
-);
+  </React.StrictMode>,
+)

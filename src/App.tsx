@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Login } from "./components/auth/Login";
 import { Registration } from "./components/auth/Registration";
 import { Wrapper } from "./components/wrapper/Wrapper";
@@ -12,8 +12,8 @@ import { TranslatorProvider } from "./provider/TranslatorProvider";
 import "./App.scss";
 import { PreLoader } from "./components/pre_loader/PreLoader";
 
-export const App = () => {
-	const [loading, setLoading] = useState(false);
+export const App: FC = () => {
+	const [loading, setLoading] = useState<boolean>(false);
 
 	useEffect(() => {
 		setLoading(true);

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, FC } from "react";
 import { TranslatorContext } from "../../../provider/TranslatorProvider";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../../hook/useTheme";
@@ -8,24 +8,27 @@ import "./Header.scss";
 
 import logo from "../../../assets/logo.png";
 import logoDark from "../../../assets/logo-dark.png";
+import { IsOpenProps } from "../Wrapper";
 
-export const Header = (props) => {
+interface HeaderProps extends IsOpenProps {
+}
+
+export const Header: FC<HeaderProps> = (props) => {
 	const { isDark, setIsDark } = useTheme();
-	const [headerScroll, setHeaderScroll] = useState(false);
+	const [headerScroll, setHeaderScroll] = useState<boolean>(false);
 	const { t, changeLanguage } = useContext(TranslatorContext);
-	const [currentLanguage, setCurrentLanguage] = useState(
-		localStorage.getItem("i18nextLng")
+	const [currentLanguage, setCurrentLanguage] = useState<string>(
+		localStorage.getItem("i18nextLng") as string
 	);
 
-	const handleLanguageChange = (lang) => {
+	const handleLanguageChange = (lang: string) => {
 		changeLanguage(lang);
 		setCurrentLanguage(lang);
 	};
 
-	const isLanguage = (lang) => {
+	const isLanguage = (lang: string) => {
 		return currentLanguage.startsWith(lang);
 	};
-
 	const changeBackground = () => {
 		if (window.scrollY >= 10) {
 			setHeaderScroll(true);
@@ -90,7 +93,8 @@ export const Header = (props) => {
 																viewBox="0 0 24 24"
 																className="arrow__icon"
 															>
-																<path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
+																<path
+																	d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
 															</svg>
 														</span>
 													</div>
@@ -148,7 +152,8 @@ export const Header = (props) => {
 													viewBox="0 0 24 24"
 													className="arrow__icon arrow__icon__V2"
 												>
-													<path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
+													<path
+														d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
 												</svg>
 											</span>
 										</div>
@@ -223,7 +228,8 @@ export const Header = (props) => {
 													className="button__icon"
 													data-v-3a85cb39=""
 												>
-													<path d="M18.9,10.9h-6v-6c0-0.6-0.4-1-1-1s-1,0.4-1,1v6h-6c-0.6,0-1,0.4-1,1s0.4,1,1,1h6v6c0,0.6,0.4,1,1,1s1-0.4,1-1v-6h6c0.6,0,1-0.4,1-1S19.5,10.9,18.9,10.9z"></path>
+													<path
+														d="M18.9,10.9h-6v-6c0-0.6-0.4-1-1-1s-1,0.4-1,1v6h-6c-0.6,0-1,0.4-1,1s0.4,1,1,1h6v6c0,0.6,0.4,1,1,1s1-0.4,1-1v-6h6c0.6,0,1-0.4,1-1S19.5,10.9,18.9,10.9z"></path>
 												</svg>
 											</span>
 
@@ -305,7 +311,8 @@ export const Header = (props) => {
 											viewBox="0 0 24 24"
 											className="arrow__icon arrow__icon__V2"
 										>
-											<path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
+											<path
+												d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" />
 										</svg>
 									</span>
 
