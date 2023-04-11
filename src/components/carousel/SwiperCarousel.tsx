@@ -16,7 +16,7 @@ import {
 } from "swiper";
 
 // import pic1 from "./img-slider/Elcho911.webp";
-import pic2 from "./img-slider/person.png";
+import pic2 from "./img-slider/Askar.png";
 
 interface Slide {
 	id: number;
@@ -83,98 +83,98 @@ export const SwiperCarousel: FC = () => {
 		{
 			id: 1,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar",
+			position: "Founder of DevX"
 		},
 		{
 			id: 2,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 3,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 4,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 5,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 6,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 7,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 8,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 9,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 10,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 11,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 12,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 13,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 14,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 15,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		},
 		{
 			id: 16,
 			imgSrc: pic2,
-			name: "Elcho911",
-			position: "Full-Stack DevXer"
+			name: "Askar Musakunov",
+			position: "Founder of DevX"
 		}
 	];
 

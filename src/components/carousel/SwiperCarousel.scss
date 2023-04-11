@@ -10,11 +10,12 @@
 			background-position: center;
 			background-size: cover;
 			width: 210px;
-			height: 440px;
+			height: 420px;
 
 			.card {
 				position: relative;
 				width: 100%;
+
 				img {
 					display: block;
 					width: 100%;
@@ -30,6 +31,10 @@
 
 					.about__people {
 						display: block;
+
+						h2 {
+							font-size: 18px
+						}
 					}
 				}
 			}
