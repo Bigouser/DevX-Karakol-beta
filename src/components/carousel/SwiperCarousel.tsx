@@ -15,7 +15,8 @@ import {
 	AutoplayCallback
 } from "swiper";
 
-import pic from "./img-slider/Elcho911.webp";
+// import pic1 from "./img-slider/Elcho911.webp";
+import pic2 from "./img-slider/person.png";
 
 interface Slide {
 	id: number;
@@ -81,97 +82,97 @@ export const SwiperCarousel: FC = () => {
 	const slides: Slide[] = [
 		{
 			id: 1,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=1",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 2,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=2",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 3,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=3",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 4,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=4",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 5,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=5",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 6,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=6",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 7,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=7",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 8,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=8",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 9,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=9",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 10,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=10",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 11,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=11",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 12,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=12",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 13,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=13",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 14,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=14",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 15,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=15",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		},
 		{
 			id: 16,
-			imgSrc: "https://api.lorem.space/image/game?w=1920&h1080is=16",
+			imgSrc: pic2,
 			name: "Elcho911",
 			position: "Full-Stack DevXer"
 		}
