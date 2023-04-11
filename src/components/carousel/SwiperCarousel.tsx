@@ -83,7 +83,7 @@ export const SwiperCarousel: FC = () => {
 		{
 			id: 1,
 			imgSrc: pic2,
-			name: "Askar",
+			name: "Askar Musakunov",
 			position: "Founder of DevX"
 		},
 		{
