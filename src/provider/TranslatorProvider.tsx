@@ -1,4 +1,10 @@
-import React, { FC, ReactNode, useState, useEffect, createContext } from "react";
+import React, {
+	FC,
+	ReactNode,
+	useState,
+	useEffect,
+	createContext
+} from "react";
 import { useTranslation } from "react-i18next";
 
 interface TranslatorProviderProps {
@@ -13,19 +19,22 @@ interface TranslatorContextValues {
 
 export const TranslatorContext = createContext<TranslatorContextValues>({
 	t: () => "",
-	changeLanguage: async () => {
-	},
+	changeLanguage: async () => {},
 	isInitialized: false
 });
 
-export const TranslatorProvider: FC<TranslatorProviderProps> = ({ children }) => {
+export const TranslatorProvider: FC<TranslatorProviderProps> = ({
+	children
+}) => {
 	const { t, i18n } = useTranslation();
 	const [isInitialized, setIsInitialized] = useState(false);
 
 	useEffect(() => {
 		const loadNamespaces = async () => {
-			await i18n.loadNamespaces("translation");
-			setIsInitialized(true);
+			if (i18n && typeof i18n.loadNamespaces === "function") {
+				await i18n.loadNamespaces("translation");
+				setIsInitialized(true);
+			}
 		};
 		loadNamespaces();
 	}, [i18n]);
